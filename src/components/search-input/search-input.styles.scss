@@ -1,0 +1,16 @@
+.search-input {
+  width: 100%;
+  padding: 1rem 3rem;
+  background-color: var(--clr-card-bg);
+  color: var(--clr-input-text);
+  border: none;
+  border-radius: 0.5rem;
+
+  @media only screen and (max-width: 25em) {
+    // padding: 1rem 1rem;
+  }
+
+  &::placeholder {
+    color: var(--clr-input-text);
+  }
+}

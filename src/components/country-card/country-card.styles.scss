@@ -1,0 +1,57 @@
+.card-container {
+  --_spacer: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  cursor: pointer;
+  background-color: var(--clr-card-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  transition: scale 250ms;
+
+  &:hover {
+    scale: 1.015;
+
+    .card-info__title {
+      text-decoration: underline;
+    }
+  }
+
+  .card-details {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--_spacer);
+  }
+
+  .card-flag-image {
+    aspect-ratio: 2 / 1.2;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-common-name {
+    color: var(--clr-text);
+    font-weight: var(--fw-800);
+  }
+
+  .card-info {
+    font-size: var(--fs-300);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &__title {
+      color: var(--clr-text);
+    }
+
+    &__results {
+      color: var(--clr-text);
+      opacity: 0.7;
+    }
+  }
+}

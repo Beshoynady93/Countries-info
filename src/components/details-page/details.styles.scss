@@ -1,0 +1,119 @@
+.details-container {
+  --_spacer: var(--page-side-padding);
+  padding: var(--_spacer);
+  max-width: 90rem;
+  margin-inline: auto;
+
+  @media only screen and (max-width: 35em) {
+    --page-side-padding: 1rem;
+  }
+
+  .back-button-container {
+    margin-bottom: var(--_spacer);
+
+    &:hover {
+      .back-button-link {
+        text-decoration: underline;
+      }
+    }
+
+    .back-button-link {
+      text-decoration: none;
+      color: var(--clr-text);
+      padding: 0.5rem 2rem;
+      background-color: var(--clr-card-bg);
+      border-radius: 0.5rem;
+      word-spacing: 0.5rem;
+      box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.country-details {
+  --_gap: 5rem;
+  display: flex;
+  // flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  max-width: 70rem;
+  margin-inline: auto;
+
+  @media only screen and (max-width: 59em) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__img-container {
+    max-width: 40rem;
+    flex-shrink: 1;
+
+    img {
+      width: 30rem;
+
+      object-fit: cover;
+    }
+  }
+
+  &__info-container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: min-content 1fr 1fr;
+    column-gap: var(--_gap);
+    row-gap: 1rem;
+
+    color: var(--clr-text);
+
+    @media only screen and (max-width: 59em) {
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+    }
+  }
+
+  &__info {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+  }
+
+  &__more-info {
+    grid-column: 2 / -1;
+  }
+
+  &__results {
+    opacity: 0.7;
+  }
+
+  &__borders {
+    grid-column: span 2;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    @media only screen and (max-width: 59em) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__border-countries {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    @media only screen and (max-width: 25em) {
+      flex-wrap: wrap;
+    }
+
+    span {
+      background-color: var(--clr-card-bg);
+      padding: 0.3rem 1rem;
+      color: var(--clr-text);
+      opacity: 0.7;
+      box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.header-section {
+  background-color: var(--clr-card-bg);
+  padding: 1rem var(--page-side-padding);
+  max-width: 90rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 35em) {
+    --page-side-padding: 1rem;
+  }
+
+  @media only screen and (max-width: 25em) {
+    --page-side-padding: 0.5rem;
+  }
+
+  .header-heading {
+    font-size: 2rem;
+    color: var(--clr-text);
+
+    @media only screen and (max-width: 35em) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 25em) {
+      font-size: 1rem;
+    }
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.theme-change-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--clr-text);
+
+  display: flex;
+  place-items: center;
+  gap: 0.5rem;
+}

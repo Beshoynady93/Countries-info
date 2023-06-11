@@ -1,0 +1,67 @@
+:root {
+  // colors
+  --clr-primary-300: hsl(209, 23%, 22%);
+  --clr-primary-400: hsl(207, 26%, 17%);
+  --clr-primary-500: hsl(200, 15%, 8%);
+
+  --clr-secondary-100: hsl(0, 0%, 100%);
+  --clr-secondary-200: hsl(0, 0%, 90%);
+  --clr-secondary-500: hsl(0, 0%, 52%);
+
+  // Dark mode colors
+  --clr-body-bg: var(--clr-primary-400);
+  --clr-card-bg: var(--clr-primary-300);
+  --clr-text: var(--clr-secondary-100);
+  --clr-input-text: var(--clr-secondary-100);
+
+  // Typography
+  --ff-main: 'Nunito Sans', sans-serif;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-800: 800;
+
+  // Others
+  --page-side-padding: 3rem;
+}
+
+.light-mode {
+  // Light mode
+  --clr-body-bg: var(--clr-secondary-200);
+  --clr-text: var(--clr-primary-500);
+  --clr-input-text: var(--clr-secondary-500);
+  --clr-card-bg: var(--clr-secondary-100);
+}
+
+body {
+  margin: 0;
+
+  font-family: var(--ff-main);
+  font-size: var(--fs-400);
+  background-color: var(--clr-body-bg);
+  color: var(--clr-text);
+}
+
+h1 {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    // Light mode
+    --clr-body-bg: var(--clr-secondary-200);
+    --clr-text: var(--clr-primary-500);
+    --clr-input-text: var(--clr-secondary-500);
+    --clr-card-bg: var(--clr-secondary-200);
+  }
+}
